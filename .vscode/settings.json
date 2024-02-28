@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Academy Pinball.sln",
+    "dotnet.defaultSolution": "Sayid_Achmad_Maulana-GamePinball.sln",
     "discord.enabled": true
 }

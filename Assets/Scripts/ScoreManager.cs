@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public float score;
-    void Start() => ResetScore();
+    void Start() => DefaultScore();
 
     public void AddScore(float addition)
     {
@@ -18,4 +18,5 @@ public class ScoreManager : MonoBehaviour
         Debug.Log(score);
     }
     public void ResetScore() => score = 0;
+    private void DefaultScore() => score = 6;
 }
