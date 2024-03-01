@@ -8,21 +8,14 @@ public class PaddleController : MonoBehaviour
     private HingeJoint hinge;
     private float targetPressed;
     private float targetRelease;
-
-    // Start is called before the first frame update
+    public CollisionDetectionMode cdm;
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
         targetPressed = hinge.limits.max;
         targetRelease = hinge.limits.min;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ReadInput();
-        // MovePaddle();
-    }
+    void Update() => ReadInput();
 
     private void ReadInput()
     {
@@ -37,7 +30,7 @@ public class PaddleController : MonoBehaviour
         }
         hinge.spring = jointSprint;
     }
-    private void MovePaddle()
-    {
-    }
+    // private void MovePaddle()
+    // {
+    // }
 }

@@ -16,17 +16,7 @@ public class MainMenuUIController : MonoBehaviour
     exitButton.onClick.AddListener(ExitGame);
     creditButton.onClick.AddListener(CreditsGame);
   }
-
-  public void PlayGame()
-  {
-    SceneManager.LoadScene("Pinball_Scene");
-  }
-  public void CreditsGame()
-  {
-    SceneManager.LoadScene("Credit");
-  }
-  public void ExitGame()
-  {
-    Application.Quit();
-  }
+  public void PlayGame() => SceneManager.LoadScene("Pinball_Scene");
+  public void CreditsGame() => SceneManager.LoadScene("Credit");
+  public void ExitGame() => Application.Quit();
 }

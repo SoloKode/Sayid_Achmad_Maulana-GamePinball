@@ -6,18 +6,6 @@ using UnityEngine.UI;
 
 public class GameOverUIController : MonoBehaviour
 {
-    // reference untuk button
-    public Button mainMenuButton;
-
-    private void Start()
-    {
-        // setup event saat button di klik
-        mainMenuButton.onClick.AddListener(MainMenu);
-    }
-
-    public void MainMenu()
-    {
-        // kembali ke main menu
-        SceneManager.LoadScene("Main_Menu");
-    }
+    public void MainMenu() => SceneManager.LoadScene("Main_Menu");
+    public void CreditMenu() => SceneManager.LoadScene("Credit");
 }

@@ -11,11 +11,7 @@ public class BumperController : MonoBehaviour
     public ScoreManager scoreManager;
     public VFXManager VFXManager;
     public float score;
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
-    // Start is called before the first frame update
+    private void Start() => animator = GetComponent<Animator>();
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider == bola)

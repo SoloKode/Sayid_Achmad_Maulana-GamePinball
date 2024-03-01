@@ -7,16 +7,11 @@ public class BallController : MonoBehaviour
 {
     public float maxSpeed;
     private Rigidbody rig;
-    // Start is called before the first frame update
+    public CollisionDetectionMode collisionDetectionMode;
     void Start() => rig = GetComponent<Rigidbody>();
-
-    // Update is called once per frame
     void Update()
     {
         if (rig.velocity.magnitude > maxSpeed) rig.velocity = rig.velocity.normalized * maxSpeed;
-
-        if(Input.GetKeyDown(KeyCode.R)){
-            SceneManager.LoadScene("Pinball_Scene");
-        }   
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("Pinball_Scene");
     }
 }
