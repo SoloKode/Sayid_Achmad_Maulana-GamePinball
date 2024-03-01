@@ -13,5 +13,6 @@ public class BallController : MonoBehaviour
     {
         if (rig.velocity.magnitude > maxSpeed) rig.velocity = rig.velocity.normalized * maxSpeed;
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("Pinball_Scene");
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Main_Menu");
     }
 }
